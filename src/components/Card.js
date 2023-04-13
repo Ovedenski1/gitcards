@@ -8,11 +8,11 @@ class Card extends React.Component {
 	render() {
   	const profile = this.props;
   	return (
-    	<div className="github-profile">
-    	  <img src={profile.avatar_url} />
-        <div className="info">
-          <div className="name">{profile.name}</div>
-          <div className="company">{profile.company}</div>
+    	<div className="card">
+    	  <img className="img-responsive img-rounded" style={{maxHeight: 250, maxWidth: 250}} src={profile.avatar_url} />
+        <div className="card-body">
+          <div className="card-title">{profile.name}</div>
+          <div className="card-text">{profile.company}</div>
         </div>
     	</div>
     );

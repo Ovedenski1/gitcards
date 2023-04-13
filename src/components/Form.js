@@ -13,15 +13,21 @@ class Form extends React.Component {
 	render() {
   	return (
     	<form onSubmit={this.handleSubmit}>
+        <div className="form-group">
+            <label htmlFor="userName">User Name</label>
     	  <input 
           type="text" 
           value={this.state.userName}
           onChange={event => this.setState({ userName: event.target.value })}
           placeholder="GitHub username" 
+          id="userName"
           required 
         />
+        </div>
+        <br/>
         <button>Add card</button>
     	</form>
+        
     );
   }
 }
